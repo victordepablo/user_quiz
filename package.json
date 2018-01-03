@@ -1,0 +1,20 @@
+{
+  "name": "user_quiz",
+  "version": "1.0.0",
+  "description": "Program illustrating relation definition among tables.",
+  "main": "1_all.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CORE-UPM/user_quiz.git"
+  },
+  "author": "Juan Quemada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CORE-UPM/user_quiz/issues"
+  },
+  "homepage": "https://github.com/CORE-UPM/user_quiz#readme",
+  "dependencies": {
+    "sequelize": "^3.30.2",
+    "sqlite3": "^3.1.8"
+  }
+}

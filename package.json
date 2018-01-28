@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Program illustrating relation definition among tables.",
   "main": "1_all.js",
+  "scripts": {
+    "migrate": "./node_modules/.bin/sequelize db:migrate --url sqlite://$(pwd)/db.sqlite",
+    "seed": "./node_modules/.bin/sequelize db:seed:all --url sqlite://$(pwd)/db.sqlite"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CORE-UPM/user_quiz.git"
@@ -15,6 +19,7 @@
   "homepage": "https://github.com/CORE-UPM/user_quiz#readme",
   "dependencies": {
     "sequelize": "^3.30.2",
+    "sequelize-cli": "^3.2.0",
     "sqlite3": "^3.1.8"
   }
 }

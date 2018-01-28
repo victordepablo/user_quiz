@@ -1,6 +1,6 @@
 
 const sequelize = require("./model.js");
-const {user, quiz} = require("./model.js").models;
+const {user, quiz, favourites} = require("./model.js").models;
 
 sequelize.sync()
 .then(() => user.count())
@@ -18,6 +18,15 @@ sequelize.sync()
           { question: 'Capital of France', answer: 'Paris', authorId: 1},
           { question: 'Capital of Italy', answer: 'Rome', authorId: 2},
           { question: 'Capital of Russia', answer: 'Moscow', authorId: 3}
+        ])
+      })
+      .then( () => {
+        return favourites.bulkCreate([
+          { userId: 1, quizId: 3},
+          { userId: 2, quizId: 4},
+          { userId: 2, quizId: 1},
+          { userId: 2, quizId: 2},
+          { userId: 3, quizId: 2}
         ])
       })
       .then(() => console.log(`  DB created: 3 users, 4 quizzes`))
